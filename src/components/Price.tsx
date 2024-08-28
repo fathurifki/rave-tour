@@ -84,7 +84,7 @@ function PriceDetailComponent({ primary }: SliceProps) {
         </div>
         <div className="flex mt-4 space-x-8 space-y-4 md:mt-0 ">
           <div className="text-right">
-            <p className="text-muted-foreground">Today's Deal</p>
+            <p className="text-muted-foreground">Today&apos;s Deal</p>
             <p className="text-3xl font-bold text-primary">
               From{" "}
               {formatCurrency(
