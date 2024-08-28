@@ -8,10 +8,9 @@ import {
 } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 import { PrismicImage, PrismicRichText } from "@prismicio/react";
-
 interface OptionalExperienceModalProps {
   title: string;
-  imageUrl: string;
+  imageUrl: any;
   experienceInfo: string;
   price: number;
   bookingInfo: string;
