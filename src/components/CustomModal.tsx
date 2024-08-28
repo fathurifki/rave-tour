@@ -11,7 +11,7 @@ import { PrismicImage, PrismicRichText } from "@prismicio/react";
 interface OptionalExperienceModalProps {
   title: string;
   imageUrl: any;
-  experienceInfo: string;
+  experienceInfo: any;
   price: number;
   bookingInfo: string;
 }
