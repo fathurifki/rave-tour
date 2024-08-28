@@ -1,0 +1,121 @@
+{
+  "id": "summary_tour",
+  "type": "SharedSlice",
+  "name": "SummaryTour",
+  "description": "SummaryTour",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "trip_year": {
+          "type": "Group",
+          "config": {
+            "label": "Trip Year",
+            "repeat": true,
+            "fields": {
+              "year": {
+                "type": "Date",
+                "config": {
+                  "label": "year",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "image_tour": {
+          "type": "Image",
+          "config": {
+            "label": "image_tour",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "travel": {
+          "type": "Text",
+          "config": {
+            "label": "travel",
+            "placeholder": ""
+          }
+        },
+        "meals": {
+          "type": "Text",
+          "config": {
+            "label": "meals",
+            "placeholder": ""
+          }
+        },
+        "accommodation": {
+          "type": "Text",
+          "config": {
+            "label": "accommodation",
+            "placeholder": ""
+          }
+        },
+        "is_low_deposit": {
+          "type": "Boolean",
+          "config": {
+            "label": "is_low_deposit",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "is_free_charge": {
+          "type": "Boolean",
+          "config": {
+            "label": "is_free_charge",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "is_deposit_protection": {
+          "type": "Boolean",
+          "config": {
+            "label": "is_deposit_protection",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "trip_code": {
+          "type": "Text",
+          "config": {
+            "label": "trip_code",
+            "placeholder": ""
+          }
+        },
+        "special_request": {
+          "type": "Text",
+          "config": {
+            "label": "special_request",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "id": "day_by_day_iternary",
+  "type": "SharedSlice",
+  "name": "DayByDayIternary",
+  "description": "DayByDayIternary",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "day_details": {
+          "type": "Group",
+          "config": {
+            "label": "day_details",
+            "repeat": true,
+            "fields": {
+              "day": {
+                "type": "Number",
+                "config": {
+                  "label": "day",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "title",
+                  "placeholder": ""
+                }
+              },
+              "image_day_detail": {
+                "type": "Image",
+                "config": {
+                  "label": "image_day_detail",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "destination": {
+                "type": "Text",
+                "config": {
+                  "label": "destination",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "arrival": {
+                "type": "Text",
+                "config": {
+                  "label": "arrival",
+                  "placeholder": ""
+                }
+              },
+              "welcome": {
+                "type": "Text",
+                "config": {
+                  "label": "welcome",
+                  "placeholder": ""
+                }
+              },
+              "accommodation": {
+                "type": "Text",
+                "config": {
+                  "label": "accommodation",
+                  "placeholder": ""
+                }
+              },
+              "included_meals": {
+                "type": "Text",
+                "config": {
+                  "label": "included_meals",
+                  "placeholder": ""
+                }
+              },
+              "is_arrival": {
+                "type": "Boolean",
+                "config": {
+                  "label": "is_arrival",
+                  "default_value": false,
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "is_departure": {
+                "type": "Boolean",
+                "config": {
+                  "label": "is_departure",
+                  "default_value": false,
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "is_welcome": {
+                "type": "Boolean",
+                "config": {
+                  "label": "is_welcome",
+                  "default_value": false,
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "is_special_request": {
+                "type": "Boolean",
+                "config": {
+                  "label": "is_special_request",
+                  "default_value": false,
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "color_special_request": {
+                "type": "Color",
+                "config": {
+                  "label": "Color special request",
+                  "placeholder": ""
+                }
+              },
+              "special_request": {
+                "type": "Text",
+                "config": {
+                  "label": "special_request",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "experiences": {
+          "type": "Group",
+          "config": {
+            "label": "experiences",
+            "repeat": true,
+            "fields": {
+              "image_experience": {
+                "type": "Image",
+                "config": {
+                  "label": "image_experience",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "type": {
+                "type": "Select",
+                "config": {
+                  "label": "type",
+                  "placeholder": "",
+                  "options": [
+                    "Iconic",
+                    "Optional"
+                  ]
+                }
+              },
+              "day": {
+                "type": "Number",
+                "config": {
+                  "label": "day",
+                  "placeholder": ""
+                }
+              },
+              "special_request": {
+                "type": "Text",
+                "config": {
+                  "label": "special_request",
+                  "placeholder": ""
+                }
+              },
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "title",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "description",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "color_tag": {
+                "type": "Color",
+                "config": {
+                  "label": " Color tag",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

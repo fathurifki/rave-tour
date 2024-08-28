@@ -2,4 +2,13 @@
 
 import dynamic from "next/dynamic";
 
-export const components = {};
+export const components = {
+  day_by_day_iternary: dynamic(() => import("./DayByDayIternary")),
+  frequently_asked_questions: dynamic(
+    () => import("./FrequentlyAskedQuestions"),
+  ),
+  sightseeing_highlights: dynamic(() => import("./SightseeingHighlights")),
+  summary_price: dynamic(() => import("./SummaryPrice")),
+  summary_tour: dynamic(() => import("./SummaryTour")),
+  travel_highlights: dynamic(() => import("./TravelHighlights")),
+};

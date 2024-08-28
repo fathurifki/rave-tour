@@ -1,0 +1,28 @@
+{
+  "format": "custom",
+  "id": "summary_price",
+  "label": "summary_price",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "summary_price": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

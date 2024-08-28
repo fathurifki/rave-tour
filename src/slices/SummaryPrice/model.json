@@ -1,0 +1,63 @@
+{
+  "id": "summary_price",
+  "type": "SharedSlice",
+  "name": "SummaryPrice",
+  "description": "SummaryPrice",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "tour_name": {
+          "type": "Text",
+          "config": {
+            "label": "Tour Name",
+            "placeholder": ""
+          }
+        },
+        "rating": {
+          "type": "Number",
+          "config": {
+            "label": "Rating",
+            "placeholder": ""
+          }
+        },
+        "review_count": {
+          "type": "Number",
+          "config": {
+            "label": "Review",
+            "placeholder": ""
+          }
+        },
+        "is_popular": {
+          "type": "Boolean",
+          "config": {
+            "label": "Is Popular",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "ori_price": {
+          "type": "Number",
+          "config": {
+            "label": "Ori Price",
+            "placeholder": ""
+          }
+        },
+        "disc_price": {
+          "type": "Number",
+          "config": {
+            "label": "Disc Price",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

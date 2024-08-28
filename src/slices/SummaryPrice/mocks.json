@@ -1,0 +1,38 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"tour_name": {
+				"__TYPE__": "FieldContent",
+				"value": "ourselves",
+				"type": "Text"
+			},
+			"rating": {
+				"__TYPE__": "FieldContent",
+				"value": "34",
+				"type": "Number"
+			},
+			"review_count": {
+				"__TYPE__": "FieldContent",
+				"value": "13",
+				"type": "Number"
+			},
+			"is_popular": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"ori_price": {
+				"__TYPE__": "FieldContent",
+				"value": "98",
+				"type": "Number"
+			},
+			"disc_price": {
+				"__TYPE__": "FieldContent",
+				"value": "83",
+				"type": "Number"
+			}
+		},
+		"items": []
+	}
+]

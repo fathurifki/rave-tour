@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"sightseeing": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"sightseeing_detail",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Proident minim laboris exercitation excepteur incididunt occaecat reprehenderit ex nostrud. Nulla elit exercitation sint et. Duis exercitation adipisicing minim mollit magna labore labore fugiat sunt officia excepteur in."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
