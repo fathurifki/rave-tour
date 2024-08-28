@@ -477,12 +477,43 @@ export interface DayByDayIternarySliceDefaultPrimaryExperiencesItem {
    * - **Documentation**: https://prismic.io/docs/field#color
    */
   color_tag: prismic.ColorField;
+
+  /**
+   * is_additional field in *DayByDayIternary → Default → Primary → experiences*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: false
+   * - **API ID Path**: day_by_day_iternary.default.primary.experiences[].is_additional
+   * - **Documentation**: https://prismic.io/docs/field#boolean
+   */
+  is_additional: prismic.BooleanField;
+
+  /**
+   * additional_price field in *DayByDayIternary → Default → Primary → experiences*
+   *
+   * - **Field Type**: Number
+   * - **Placeholder**: *None*
+   * - **API ID Path**: day_by_day_iternary.default.primary.experiences[].additional_price
+   * - **Documentation**: https://prismic.io/docs/field#number
+   */
+  additional_price: prismic.NumberField;
 }
 
 /**
  * Primary content in *DayByDayIternary → Default → Primary*
  */
 export interface DayByDayIternarySliceDefaultPrimary {
+  /**
+   * descr field in *DayByDayIternary → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: day_by_day_iternary.default.primary.descr
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descr: prismic.RichTextField;
+
   /**
    * day_details field in *DayByDayIternary → Default → Primary*
    *

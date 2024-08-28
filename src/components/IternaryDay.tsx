@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ExperienceCard from "./ExperienceCard";
-import { RichTextField } from '@prismicio/types';
+import { RichTextField } from "@prismicio/types";
 
 function IternaryDayComponent({ primary }: any) {
   const [openDays, setOpenDays] = useState<string[]>([]);
@@ -52,8 +52,13 @@ function IternaryDayComponent({ primary }: any) {
 
   return (
     <div className="">
-      <h3 className="text-2xl font-bold">Day by Day Itinerary</h3>
-      <div className="flex justify-end mb-4">
+      <h3 className="text-2xl font-bold font-serif text-[#414141] mb-4">
+        Day by Day Itinerary
+      </h3>
+      <div className="text-md font-sans text-gray-500 mb-6">
+        <PrismicRichText field={primary.descr} />
+      </div>
+      <div className="flex justify-end mb-4 font-sans">
         <div
           className="cursor-pointer flex items-center text-md font-semibold"
           onClick={toggleExpandAll}
@@ -94,7 +99,7 @@ function IternaryDayComponent({ primary }: any) {
                         Day {item.day}
                         {item.is_special_request && (
                           <span
-                            className="text-xs text-white px-2 py-1 rounded-md ml-2"
+                            className="text-xs text-white px-2 py-1 rounded-md ml-2 font-sans"
                             style={{
                               backgroundColor: item.color_special_request,
                             }}
@@ -104,8 +109,10 @@ function IternaryDayComponent({ primary }: any) {
                         )}
                       </h2>
                       <div className="flex gap-4 items-center mt-2">
-                        <p className="text-lg font-bold ">{item.title}</p>
-                        <div className="flex items-center text-xs text-gray-400">
+                        <p className="text-lg font-bold font-serif text-[#414141]">
+                          {item.title}
+                        </p>
+                        <div className="flex items-center text-xs text-[#6b6b6b]">
                           {item.destination
                             .split(",")
                             .map((dest: any, index: any, array: any) => (
@@ -118,7 +125,7 @@ function IternaryDayComponent({ primary }: any) {
                             ))}
                         </div>
                       </div>
-                      <div className="flex space-x-4">
+                      <div className="flex space-x-4 text-gray-600 font-sans">
                         {item.is_arrival && (
                           <span className="text-lg flex gap-2 items-center">
                             <PlaneLanding className="w-4 h-4" /> Arrival
@@ -140,7 +147,7 @@ function IternaryDayComponent({ primary }: any) {
                       </div>
                     </div>
                     <div className="flex items-center">
-                      <span className="text-lg font-semibold text-gray-500">
+                      <span className="text-lg font-semibold text-gray-600 font-sans">
                         See{" "}
                         {openDays.includes(`day-${item.day}`) ? "less" : "more"}
                       </span>
@@ -169,11 +176,13 @@ function IternaryDayComponent({ primary }: any) {
                     <h4 className="text-lg font-semibold mb-4 text-gray-500">
                       Day {item.day}
                     </h4>
-                    <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-[#414141] font-serif">
+                      {item.title}
+                    </h3>
                     <div className="flex flex-col lg:flex-row lg:space-x-8">
                       <div className="lg:w-full space-y-5">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
-                          <div className="col-span-1 space-y-4">
+                          <div className="col-span-1 space-y-4 text-gray-600 font-sans">
                             <PrismicRichText field={item?.description ?? []} />
                             <ul className="space-y-8">
                               {item.is_arrival && (
@@ -236,7 +245,7 @@ function IternaryDayComponent({ primary }: any) {
 
                   <div className="px-8 space-y-4">
                     <div className="flex justify-between items-center">
-                      <h3 className="text-2xl font-bold mb-4">
+                      <h3 className="text-2xl font-bold mb-4 font-serif text-[#414141]">
                         Included and optional experiences
                       </h3>
                       {experiences &&
@@ -265,10 +274,12 @@ function IternaryDayComponent({ primary }: any) {
                         )}
                     </div>
 
-                    <div className="overflow-x-hidden" ref={scrollContainerRef}>
+                    <div className="overflow-x-scroll" ref={scrollContainerRef}>
                       <div className="flex space-x-10 pb-4">
                         {experiences
-                          .filter((experience: any) => item.day === experience.day)
+                          .filter(
+                            (experience: any) => item.day === experience.day
+                          )
                           .map((experience: any) => (
                             <div
                               key={`${experience.day}-${experience.title}`}

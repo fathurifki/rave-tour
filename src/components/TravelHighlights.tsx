@@ -19,17 +19,17 @@ export default function TravelHighlightComponent({
     <div className="flex border-t border-gray-200 py-20">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 space-x-10">
         <div className="md:col-span-1">
-          <h2 className="text-3xl font-bold text-[#A7282E] mb-4">
+          <h2 className="text-3xl font-bold text-[#A7282E] mb-4 font-serif">
             Travel highlights
           </h2>
-          <span className="text-md text-[#6B6B6B]">
+          <span className="text-md text-[#6B6B6B] font-sans">
             Specific transfer information can be found here:
           </span>
           <div className="mt-4 bg-[#A7282E] w-[12.125rem] h-[3.25rem] text-white flex items-center justify-center font-bold">
             Available Dates
           </div>
         </div>
-        <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10 font-sans">
           {chunkedSightseeing.map((chunk: any, chunkIndex: any) => (
             <div key={chunkIndex} className="space-y-12">
               {chunk.map((highlight: any, index: any) => (

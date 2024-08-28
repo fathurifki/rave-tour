@@ -238,8 +238,34 @@
 									"value": "#8f0c78",
 									"type": "Color"
 								}
+							],
+							[
+								"is_additional",
+								{
+									"__TYPE__": "BooleanContent",
+									"value": true
+								}
+							],
+							[
+								"additional_price",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "82",
+									"type": "Number"
+								}
 							]
 						]
+					}
+				]
+			},
+			"descr": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt id dolore occaecat dolore laboris amet aliquip sint ullamco do duis irure in. Non aliqua culpa fugiat proident nostrud amet consequat laborum est ea velit culpa irure. Do ut ut esse et et fugiat ullamco aliquip proident."
+						}
 					}
 				]
 			}

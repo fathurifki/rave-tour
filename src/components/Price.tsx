@@ -29,7 +29,7 @@ function PriceDetailComponent({ primary }: any) {
   };
 
   return (
-    <div className="w-full  p-4">
+    <div className="w-full  p-4 font-sans">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
         <div>
           <div className="flex items-center mb-2">
@@ -68,7 +68,7 @@ function PriceDetailComponent({ primary }: any) {
               </div>
             )}
           </div>
-          <h1 className="text-3xl font-bold">{tour_name}</h1>
+          <h1 className="text-3xl font-bold font-serif text-[#414141]">{tour_name}</h1>
         </div>
         <div className="flex mt-4 space-x-8 space-y-4 md:mt-0 ">
           <div className="text-right">

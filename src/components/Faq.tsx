@@ -28,9 +28,9 @@ export default function FaqComponent({ primary }: { primary: any }) {
 
   return (
     <div>
-      <p className="text-2xl font-bold mb-4">Frequently asked questions</p>
+      <p className="text-2xl font-bold mb-4 font-serif text-[#414141]">Frequently asked questions</p>
       <div
-        className="cursor-pointer flex items-center text-md font-semibold mb-4 justify-end"
+        className=" text-[#414141] cursor-pointer flex items-center text-md font-semibold mb-4 justify-end"
         onClick={handleExpandAll}
       >
         {expandedIndexes.size === faq.length
@@ -53,7 +53,7 @@ export default function FaqComponent({ primary }: { primary: any }) {
         {faq.map((item: any, idx: number) => (
           <Card key={idx} className="mb-4">
             <CardTitle
-              className={`text-sm ${expandedIndexes.has(idx) ? "bg-[#2D5A7B] text-white" : "bg-white "} p-6 leading-[135%] font-bold tracking-[-0.1px] flex justify-between items-center cursor-pointer`}
+              className={`text-lg font-sans text-[#414141] ${expandedIndexes.has(idx) ? "bg-[#2D5A7B] text-white" : "bg-white "} p-6 leading-[135%] font-bold tracking-[-0.1px] flex justify-between items-center cursor-pointer`}
               onClick={() => toggleExpand(idx)}
             >
               {item.question}
@@ -70,7 +70,7 @@ export default function FaqComponent({ primary }: { primary: any }) {
                 expandedIndexes.has(idx) ? "max-h-96 py-6" : "max-h-0 py-0"
               }`}
             >
-              <div className="space-y-4 text-md font-normal text-[#414141]">
+              <div className="space-y-4 text-lg font-normal text-[#414141]">
                 <PrismicRichText field={item.answer} />
               </div>
             </CardContent>

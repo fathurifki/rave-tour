@@ -12,6 +12,15 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "descr": {
+          "type": "StructuredText",
+          "config": {
+            "label": "descr",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
         "day_details": {
           "type": "Group",
           "config": {
@@ -196,6 +205,22 @@
                 "type": "Color",
                 "config": {
                   "label": " Color tag",
+                  "placeholder": ""
+                }
+              },
+              "is_additional": {
+                "type": "Boolean",
+                "config": {
+                  "label": "is_additional",
+                  "default_value": false,
+                  "placeholder_true": "true",
+                  "placeholder_false": "false"
+                }
+              },
+              "additional_price": {
+                "type": "Number",
+                "config": {
+                  "label": "additional_price",
                   "placeholder": ""
                 }
               }

@@ -1,6 +1,7 @@
 "use client";
 
 import { PrismicImage, PrismicRichText } from "@prismicio/react";
+import CustomDatePicker from "./CustomDatePicker";
 
 function SummaryTourPage({ primary }: any) {
   const { image_tour } = primary;
@@ -25,18 +26,18 @@ function SummaryTourPage({ primary }: any) {
       </div>
       <div className="px-4 md:px-8 lg:px-12 py-6 md:py-10 flex flex-col gap-2">
         <div className="mb-4 flex items-center space-x-2">
-          <div className="flex items-center space-x-2">
-            <CalendarIcon className="h-5 w-5" />
-            <span className="font-semibold">Trip Year</span>
-            {primary.trip_year.map((item: any, idx: number) => (
-              <div className="" key={idx}>
-                {item.year}
-              </div>
-            ))}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <CalendarIcon className="h-5 w-5" />
+              <span className="font-semibold">Trip Year</span>
+            </div>
+            <CustomDatePicker date={primary.trip_year} />
           </div>
         </div>
-        <h2 className="text-xl md:text-3xl font-bold mb-4">{primary.title}</h2>
-        <div className="mb-4 text-lg md:text-md">
+        <h2 className="text-xl md:text-3xl font-bold mb-4 font-serif text-[#414141]">
+          {primary.title}
+        </h2>
+        <div className="mb-4 text-lg md:text-md font-sans">
           <PrismicRichText field={primary.description} />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xl">
@@ -68,24 +69,26 @@ function SummaryTourPage({ primary }: any) {
             </div>
             <a
               onClick={scrollToItinerary}
-              className="text-blue-500 underline text-sm"
+              className="text-gray-500 hover:underline text-sm font-semibold"
             >
               View day-by-day trip itinerary
             </a>
           </div>
         </div>
 
-        <div className="p-4 border rounded-md mb-4 space-y-2">
-          <p className="font-semibold text-sm md:text-base">
+        <div className="p-6 border rounded-md mb-4 space-y-2">
+          <p className="text-xl font-bold  font-serif">
             Looking to book in a group of 15 or more?
           </p>
-          <p className="text-xs md:text-sm text-muted-foreground">
+          <p className="font-sans text-md md:text-md text-muted-foreground">
             Deals, savings and exclusive private touring options available plus
             if you need a different date or itinerary change we can create a
             custom trip. Contact us for more details
           </p>
         </div>
-        <p className="font-semibold text-sm">Trip code: {primary.trip_code}</p>
+        <p className="text-sm font-sans">
+          <b>Trip code:</b> {primary.trip_code}
+        </p>
       </div>
     </div>
   );

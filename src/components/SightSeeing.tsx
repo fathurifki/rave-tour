@@ -18,15 +18,15 @@ export default function SightseeingComponent({
 
   return (
     <div>
-      <span className="text-3xl  text-[#414141] font-bold">About this trip</span>
+      <span className="text-3xl  text-[#414141] font-bold font-serif">About this trip</span>
       <div className="flex py-2 mt-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 space-x-10">
           <div className="md:col-span-1">
-            <h2 className="text-[24px] font-bold text-[#4B6B35]">
+            <h2 className="text-[24px] font-bold text-[#4B6B35] font-serif">
               Sightseeing highlights
             </h2>
           </div>
-          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10 font-sans">
             {chunkedSightseeing.map((chunk, chunkIndex) => (
               <div key={chunkIndex} className="space-y-12">
                 {chunk.map((highlight: any, index: any) => (
