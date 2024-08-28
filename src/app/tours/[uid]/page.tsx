@@ -23,9 +23,7 @@ export default async function Page({ params }: { params: Params }) {
   return (
     <div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <PriceDetailComponent
-          primary={pageSummaryPrice?.data?.slices[0]?.primary}
-        />
+        <PriceDetailComponent primary={pageSummaryPrice?.data?.slices[0]?.primary}/>
       </div>
       <Layout>
         <SliceZone slices={page.data.slices} components={components} />

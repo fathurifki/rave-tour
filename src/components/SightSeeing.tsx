@@ -29,14 +29,14 @@ export default function SightseeingComponent({
           <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
             {chunkedSightseeing.map((chunk, chunkIndex) => (
               <div key={chunkIndex} className="space-y-12">
-                {chunk.map((highlight, index) => (
+                {chunk.map((highlight: any, index: any) => (
                   <div key={index} className="flex items-center space-x-2">
                     <MapPin className="w-10 h-10 text-[#4B6B35] mr-3 mt-1 flex-shrink-0" />
                     <div>
                       <PrismicRichText
                         field={highlight.sightseeing_detail}
                         components={{
-                          paragraph: ({ children }) => (
+                          paragraph: ({ children }: any) => (
                             <p className="text-gray-700">
                               <span className="font-semibold">
                                 {children[0]}{" "}

@@ -30,9 +30,9 @@ export default function TravelHighlightComponent({
           </div>
         </div>
         <div className="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-10">
-          {chunkedSightseeing.map((chunk, chunkIndex) => (
+          {chunkedSightseeing.map((chunk: any, chunkIndex: any) => (
             <div key={chunkIndex} className="space-y-12">
-              {chunk.map((highlight, index) => (
+              {chunk.map((highlight: any, index: any) => (
                 <div key={index} className="flex items-center space-x-2">
                   <Check className="w-10 h-10 text-red-600 mr-3 mt-1 flex-shrink-0" />
                   <div>

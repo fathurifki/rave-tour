@@ -1,19 +1,7 @@
 import { Star, Tags } from "lucide-react";
 
-interface Price {
-  tour_name: string | null;
-  rating: number | 0;
-  review_count: number | null;
-  is_popular: boolean | null;
-  ori_price: number | null;
-  disc_price: number | null;
-}
 
-interface SliceProps {
-  primary: Price;
-}
-
-function PriceDetailComponent({ primary }: SliceProps) {
+function PriceDetailComponent({ primary }: any) {
   const {
     tour_name = "",
     rating = 0,
@@ -31,7 +19,7 @@ function PriceDetailComponent({ primary }: SliceProps) {
     });
   };
 
-  const discountedPrice = (value, discValue) => {
+  const discountedPrice = (value: number, discValue: number) => {
     const discountPrice = (value * discValue) / 100;
     const final = value - discountPrice;
     return {
@@ -46,7 +34,7 @@ function PriceDetailComponent({ primary }: SliceProps) {
         <div>
           <div className="flex items-center mb-2">
             <div className="flex items-center mr-2">
-              {[...Array(5)].map((_, index) => {
+              {[...Array(5)].map((_, index: any) => {
                 const starValue = index + 1;
                 const isHalfStar = rating - index > 0 && rating - index < 1;
                 return (

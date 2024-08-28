@@ -17,43 +17,9 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ExperienceCard from "./ExperienceCard";
+import { RichTextField } from '@prismicio/types';
 
-interface DayDetail {
-  day: number;
-  title: string;
-  image_day_detail: any;
-  destination: string;
-  description: string[];
-  arrival: string;
-  welcome: string;
-  accommodation: string;
-  included_meals: string;
-  is_arrival: boolean;
-  is_departure: boolean;
-  is_welcome: boolean;
-  is_special_request: boolean;
-  color_special_request: string;
-  special_request: string;
-}
-
-interface Experience {
-  image_experience: any;
-  type: string;
-  day: number;
-  special_request: string | null;
-  description: string;
-  title: string;
-  color_tag: string;
-}
-
-interface IternaryDayComponentProps {
-  primary: {
-    day_details: DayDetail[];
-    experiences: Experience[];
-  };
-}
-
-function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
+function IternaryDayComponent({ primary }: any) {
   const [openDays, setOpenDays] = useState<string[]>([]);
   const { day_details, experiences } = primary;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -80,7 +46,7 @@ function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
   };
 
   const toggleExpandAll = () => {
-    const allDays = day_details.map((item) => `day-${item.day}`);
+    const allDays = day_details.map((item: any) => `day-${item.day}`);
     setOpenDays((prev) => (prev.length === allDays.length ? [] : allDays));
   };
 
@@ -100,7 +66,7 @@ function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
           />
         </div>
       </div>
-      {day_details.map((item) => (
+      {day_details.map((item: any) => (
         <Card key={item.day} className="mb-4">
           <CardContent className="p-0">
             <div
@@ -142,7 +108,7 @@ function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
                         <div className="flex items-center text-xs text-gray-400">
                           {item.destination
                             .split(",")
-                            .map((dest, index, array) => (
+                            .map((dest: any, index: any, array: any) => (
                               <Fragment key={index}>
                                 <span>{dest.trim()}</span>
                                 {index < array.length - 1 && (
@@ -208,7 +174,7 @@ function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
                       <div className="lg:w-full space-y-5">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                           <div className="col-span-1 space-y-4">
-                            <PrismicRichText field={item.description} />
+                            <PrismicRichText field={item?.description ?? []} />
                             <ul className="space-y-8">
                               {item.is_arrival && (
                                 <li className="flex items-center space-x-2">
@@ -274,7 +240,7 @@ function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
                         Included and optional experiences
                       </h3>
                       {experiences &&
-                        experiences.filter((exp) => exp.day === item.day)
+                        experiences.filter((exp: any) => exp.day === item.day)
                           .length > 3 && (
                           <div className="flex items-center space-x-8">
                             <Button
@@ -302,8 +268,8 @@ function IternaryDayComponent({ primary }: IternaryDayComponentProps) {
                     <div className="overflow-x-hidden" ref={scrollContainerRef}>
                       <div className="flex space-x-10 pb-4">
                         {experiences
-                          .filter((experience) => item.day === experience.day)
-                          .map((experience) => (
+                          .filter((experience: any) => item.day === experience.day)
+                          .map((experience: any) => (
                             <div
                               key={`${experience.day}-${experience.title}`}
                               className="flex-none flex"
