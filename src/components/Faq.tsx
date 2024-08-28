@@ -70,7 +70,7 @@ export default function FaqComponent({ primary }: { primary: any }) {
                 expandedIndexes.has(idx) ? "max-h-96 py-6" : "max-h-0 py-0"
               }`}
             >
-              <div className="space-y-4 text-lg font-normal text-[#414141]">
+              <div className="space-y-4 text-md font-normal text-[#414141]">
                 <PrismicRichText field={item.answer} />
               </div>
             </CardContent>
